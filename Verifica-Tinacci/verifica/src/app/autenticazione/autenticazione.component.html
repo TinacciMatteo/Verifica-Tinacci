@@ -1,0 +1,22 @@
+<div *ngIf="showLogin">
+    <h1>LOGIN</h1>  
+<label>Username: <input type="text" [(ngModel)]="newUtente.username" ></label>
+<br>
+<label>Password: <input type="text" [(ngModel)]="newUtente.password"></label>
+<br>
+<button (click)="login()">Accedi</button>
+<br>
+<p>Se non sei registrato ---> <button (click)="show()">Registrati</button></p>
+</div>
+
+
+<div *ngIf="showForm">
+    <h1>REGISTER</h1> 
+    <label>Scegli un nome: <input type="text" [(ngModel)]="newUtente.username" required></label>
+    <br>
+    <label>Scegli una password: <input type="text" [(ngModel)]="newUtente.password" required></label>
+    <br>
+    <button (click)="register()">Salva</button>
+</div>
+
+<p class="messaggio">{{messaggio}}</p>
